@@ -19,3 +19,21 @@ from cte
 group by cust_name
 order by count(OUTSTANDING_AMT) desc
 limit 1
+
+
+--can use the CONNECT BY clause to retrieve all the employees in the hierarchy 
+---starting from a particular manager
+SELECT employee_name, level
+FROM employees
+WHERE employee_name <> 'Jane Doe'
+START WITH employee_id = 2
+CONNECT BY PRIOR employee_id = manager_id;
+
+--remove duplicates from a table
+with cte as
+(
+select * , row_number() over (partition by cust_code order by grade) as rn
+from customer
+)
+select * from cte
+where rn = 1
