@@ -1,6 +1,6 @@
 /* Write your PL/SQL query statement below */
 
-
+--we can use the rn difference with column in the group by 
 WITH CTE AS 
 (
     SELECT LOG_ID,

@@ -1,0 +1,13 @@
+/* Write your PL/SQL query statement below */
+
+WITH CTE AS 
+(
+
+SELECT ID , SCORE,
+DENSE_RANK() OVER (ORDER BY SCORE DESC) AS RN
+FROM SCORES
+
+)
+
+SELECT SCORE , RN AS RANK
+FROM CTE
