@@ -108,6 +108,21 @@ INSERT INTO ORDERS VALUES('200135', '2000.00', '800.00', '09/16/2008', 'C00007',
 INSERT INTO ORDERS VALUES('200131', '900.00', '150.00', '08/26/2008', 'C00012', 'A012', 'SOD');
 INSERT INTO ORDERS VALUES('200133', '1200.00', '400.00', '06/29/2008', 'C00009', 'A002', 'SOD');
 
+CREATE TABLE my_table (
+    id INT,
+    name VARCHAR(50),
+    age INT,
+    email VARCHAR(100)
+);
+
+INSERT INTO my_table (id, name, age, email)
+VALUES (1, 'John Smith', 35, 'john.smith@example.com');
+
+INSERT INTO my_table (id, name, age, email)
+VALUES (2, 'Jane Doe', 28, 'jane.doe@example.com');
+
+INSERT INTO my_table (id, name, age, email)
+VALUES (3, 'Bob Johnson', 42, 'bob.johnson@example.com');
 
 
 
