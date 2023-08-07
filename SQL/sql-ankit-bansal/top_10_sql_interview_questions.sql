@@ -53,6 +53,16 @@ select * from orders where upper(customer_name) = 'SHILPA'
 -- self join table , manager salary > employee salary
 
 
+-- difference between the types of joins
+
+-- update query to swap gender or any other columns use case statement
+
+update orders set customer_gender = case when customer_gender = 'Male' then 'Female'
+                                         when customer_gender = 'Female' then 'Male' end
+
+
+
+
 
 
 
